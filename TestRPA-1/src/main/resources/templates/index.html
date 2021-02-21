@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Prueba RPA</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-4">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>PRODUCTO</th>
+					<th>PRECIO ML</th>
+					<th>PRECIO AMAZON</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="producto:${productos1}">
+					<td th:text="${producto.id}">"${producto.id}"</td>
+					<td th:text="${producto.nameproduct}">"${producto.nameproduct}"</td>
+					<td th:text="${producto.preciomercadolibre}">"${producto.preciomercadolibre}"</td>
+					<td th:text="${producto.precioamazon}">"${producto.precioamazon}"</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
